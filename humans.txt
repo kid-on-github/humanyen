@@ -1,0 +1,15 @@
+/* TEAM */
+    Site Owner:         Dr. Angela Huntsman
+
+
+    Project Organizer:  Graysen Rowland
+
+
+    Developer:          Mike Peterson
+    Contact:            mike [at] lemonshell.com
+
+
+                            
+/* SITE */
+    Last update: 2021/09/06 
+    Standards: HTML5, CSS3, JavaScript
