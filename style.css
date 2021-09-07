@@ -1,6 +1,9 @@
 :root{
     --blue:#0053ad;
     --gray30:#303030;
+    --gray25:#252525;
+    --gray19:#191919;
+    --graya:#aaa;
 }
 
 * {
@@ -57,9 +60,35 @@ header a:active{
 }
 
 
+#contact{
+    background-color: var(--gray19);
+    padding: 65px;
+    display: flex;
+}
+
+#contact div{
+    width: 50%;
+}
+
+#contact img {max-width: 250px;}
+
+#contact h3{
+    font-size: 23px;
+    font-weight: 400;
+    color:var(--graya);
+}
+
 
 footer{
-}
+    background-color: var(--gray25);
+    padding: 10px 65px;
+    font-size: 12px;
+    font-weight: 700;
+    color:var(--graya);
+    text-align: right;
+}    
+
+
 
 
 
