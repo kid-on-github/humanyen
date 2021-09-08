@@ -4,15 +4,32 @@
     --gray25:#252525;
     --gray19:#191919;
     --graya:#aaa;
+    --grayf7:#F7F7F7;
+    --grayef:#EFEFEF;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color:var(--gray30);
+    margin: 0 0 10px 0;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 10px 0;
 }
 
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 main{
@@ -52,12 +69,6 @@ header a:active{
     padding:65px;
 }
 
-.info h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    color:var(--gray30);
-}
 
 
 #contact{
@@ -87,6 +98,88 @@ footer{
     color:var(--graya);
     text-align: right;
 }    
+
+
+
+#about{
+    padding: 65px;
+
+}
+
+
+#about div{
+    padding: 28px;
+    border-radius: 4px;
+    border: 1px solid var(--grayef);
+    background-color: var(--grayf7);
+    display: inline-block;
+    max-width: calc(100% - (230px + 65px) );
+}
+
+
+
+#about img{
+    width: 230px;
+    display: inline-block;
+    float: right;
+}
+
+
+
+
+
+
+
+#services{
+    padding: 25px;
+    position: relative;
+}
+
+#services::after{
+    content:'';
+    width: 100%;
+    height:100%;
+    background-color: #F2DAAE;
+    background-image: url('./images/services.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(70%);
+    display: block;
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+#services > h3{
+    margin: 15px;
+    color: white;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .9);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.serviceWrapper{
+    display: flex;
+}
+
+.serviceWrapper .title{
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    padding:0 0 15px 0;
+    font-size: 18.6px;
+    margin:0;
+}
+
+.serviceWrapper > div{
+    flex: 1;
+    background-color: white;
+    margin: 15px;
+    padding: 25px;
+}
 
 
 
