@@ -1,7 +1,5 @@
 const parallaxMultiplier = 300
 
-
-
 // get all parallax sections
 let parallaxElements = []
 

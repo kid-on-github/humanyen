@@ -34,7 +34,7 @@ body {
 
 main{
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1281px;
     box-shadow: 0 0 12px rgb(0 0 0 / 15%);
     overflow: hidden;
 }
@@ -59,11 +59,51 @@ header a{
     color: black;
     margin: 0 20px;
     color: var(--gray30);
+    transition: color .15s;
 }
 
-header a:active{
+header a:hover{
     color:var(--blue);
+    position: relative;
+    
 }
+
+header a:hover::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--blue);
+    position: absolute;
+
+
+    bottom: -10px;
+    -webkit-animation: link .15s forwards; /* for less modern browsers */
+    animation: link .25s forwards;
+    opacity: 0;
+}
+
+
+@keyframes link {
+    from {
+        bottom:-10px;
+        opacity: 0;
+    }
+    to {
+        bottom:-5px;
+        opacity: 1;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
 
 .info{
     padding:65px;
@@ -140,7 +180,7 @@ footer{
     width: 100%;
     height:100%;
     background-color: #F2DAAE;
-    background-image: url('./images/services.jpg');
+    background-image: url('../images/services.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -213,4 +253,125 @@ footer{
     font-family: Helvetica, sans-serif;
     color: white;
     font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#carouselWrapper{
+    height: 600px;
+    position: relative;
+}
+
+#screens{
+    --p1: calc( -100% - 1px);
+    --p2: calc( -200% - 2px);
+
+
+    width: calc(300%);
+    height:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+
+
+    transition: right 1s ease;
+}
+
+
+
+
+
+.screen{
+    width: calc(100% / 3);
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen span{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 6px -2px rgba(255, 255, 255, .7);
+    transition: opacity 1s;
+}
+
+.screen h4{
+    font-family: Helvetica, sans-serif;
+    color: white;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px;
+}
+
+
+.screen:nth-of-type(1){
+    background-image: url('../images/boat.jpg');
+}
+
+.screen:nth-of-type(2){
+    background-image: url('../images/vineyard.jpg');
+}
+
+.screen:nth-of-type(3){
+    background-image: url('../images/meetingroom.jpg');
+}
+
+
+
+#carouselWrapper > button{
+    opacity: 0;
+}
+
+#carouselWrapper:hover > button{
+    opacity: 1;
+}
+
+
+
+button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: 20px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: rgba(255, 255, 255, .75);
+    box-shadow: 0 0 1px 0px white;
+    position: absolute;
+    top:275px;
+    z-index: 1;
+    transition: background-position .15s, opacity .25s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-position: 13px center;
+}
+
+#next{
+    background-image: url('../images/arrow.svg');
+    right:20px;
+}
+
+#back{
+    background-image: url('../images/arrow.svg');
+    left:20px;
+    transform: rotate(180deg);
 }

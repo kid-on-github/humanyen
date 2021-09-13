@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/plain" rel="author" href="./humans.txt" />
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <title>Humanyen &#8211; Applied Social Psychology</title>
 
     <!-- Google Fonts -->
@@ -18,10 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- main stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!-- mobile styles -->
-    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="./css/mobile.css">
 
 
 
@@ -31,7 +32,7 @@
         <header>
             <img src="./images/mainLogo.png" alt="Humanyen, Energizing people for business success">
             <div>
-                <a href="#home">Home</a>
+                <a href="./">Home</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -40,6 +41,30 @@
 
         <!-- carousel -->
         <section>
+            <div id="carouselWrapper">
+                <button id='next'></button>
+                <button id='back'></button>
+                <div id="screens">
+                    <div class="screen">
+                        <span>
+                            <h4>Culture eats strategy for breakfast</h4>
+                            <h4>Your people are the energy your business runs on</h4>
+                        </span>
+                    </div>
+                    <div class="screen">
+                        <span>
+                            <h4>Grow your people</h4>
+                            <h4>to grow your business</h4>
+                        </span>
+                    </div>
+                    <div class="screen">
+                        <span>
+                            <h4>Success runs on the effectiveness of</h4>
+                            <h4>communication and connection</h4>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- welcome -->
@@ -157,7 +182,10 @@
     </main>
 
 
-    <!-- JS -->
-    <script src="./main.js"></script>
+    <!-- parallax -->
+    <script src="./js/parallax.js"></script>
+
+    <!-- carousel -->
+    <script src="./js/carousel.js"></script>
 </body>
 </html>
