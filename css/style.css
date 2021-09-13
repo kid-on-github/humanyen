@@ -307,7 +307,7 @@ footer{
     width: 100%;
     backdrop-filter: blur(4px);
     box-shadow: 0 0 6px -2px rgba(255, 255, 255, .7);
-    transition: opacity 1s;
+    transition: opacity 1s ease-out;
 }
 
 .screen h4{
