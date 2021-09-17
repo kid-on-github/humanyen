@@ -225,7 +225,7 @@ footer{
 
 
 .parallaxWrapper{
-    height: 450px;
+    height: min(40vh, 450px);
     background-color: #333;
     overflow: hidden;
     /* display: flex;
@@ -236,6 +236,7 @@ footer{
 .parallaxWrapper > img{
     width: 100%;
     position: absolute;
+    /* transform: scale(1); */
 }
 
 .parallaxWrapper > div{
@@ -254,6 +255,7 @@ footer{
     font-family: Helvetica, sans-serif;
     color: white;
     font-size: 40px;
+    text-align: center;
 }
 
 

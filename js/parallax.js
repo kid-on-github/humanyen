@@ -1,4 +1,3 @@
-const parallaxMultiplier = 300
 
 // get all parallax sections
 let parallaxElements = []
@@ -21,13 +20,22 @@ document.querySelectorAll('.parallaxWrapper')
 // reposition the image to achieve a parallax effect
 function moveParallax(elements){
     const [wrapper, img] = elements
-    const {top, height} = wrapper.getBoundingClientRect()
-    const windowHeight = window.innerHeight
 
-    const a = top + height
-    const b = windowHeight + height
+
+    const {height, bottom} = wrapper.getBoundingClientRect()
+    const imgHeight = img.getBoundingClientRect().height
+    const vh = window.innerHeight
+
+    const totalDist = vh + height
+    const remainingDist = totalDist - bottom
+    const percentDist = remainingDist/totalDist
+    const sizeDiff = imgHeight - height
+
+    const topOffset =  - percentDist *  sizeDiff
     
-    img.style.top = `${-100 - (a/b) * parallaxMultiplier}px`
+    let slowDownModifier = (sizeDiff / 100) - 1 > 1 ? (sizeDiff / 100) - 1 : 2x
+    
+    img.style.top = `${topOffset / slowDownModifier}px`
 }
 
 
