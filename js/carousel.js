@@ -29,7 +29,7 @@ let loop
 function handleClick(mod){
     updateCurrentScreen(mod)
     clearInterval(loop)
-    loop = setInterval(updateCurrentScreen, 10000)
+    loop = setInterval(updateCurrentScreen, 5000)
 }
 
 handleClick(1)

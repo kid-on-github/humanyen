@@ -171,7 +171,8 @@ footer{
 
 
 #services{
-    padding: 25px;
+    /* padding: 25px; */
+    padding: 100px 25px;
     position: relative;
 }
 
@@ -303,17 +304,17 @@ footer{
 
 .screen span{
     padding: 20px;
-    background-color: rgba(0, 0, 0, .4);
+    /* background-color: rgba(0, 0, 0, .4); */
     width: 100%;
-    backdrop-filter: blur(4px);
-    box-shadow: 0 0 6px -2px rgba(255, 255, 255, .7);
+    /* backdrop-filter: blur(4px); */
+    /* box-shadow: 0 0 6px -2px rgba(255, 255, 255, .7); */
     transition: opacity 1s ease-out;
 }
 
 .screen h4{
     font-family: Helvetica, sans-serif;
     color: white;
-    font-size: 36px;
+    font-size: 45px;
     font-weight: 400;
     text-align: center;
     margin: 10px;
