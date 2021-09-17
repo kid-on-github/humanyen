@@ -232,6 +232,9 @@ footer{
     /* display: flex;
     align-items: center; */
     position: relative;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .parallaxWrapper > img{
@@ -259,6 +262,10 @@ footer{
     text-align: center;
 }
 
+
+/* .parallaxWrapper{
+    background-image: url('../images/meetingroom.jpg');
+} */
 
 
 
