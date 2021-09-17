@@ -33,7 +33,7 @@ function moveParallax(elements){
 
     const topOffset =  - percentDist *  sizeDiff
     
-    let slowDownModifier = (sizeDiff / 100) - 1 > 1 ? (sizeDiff / 100) - 1 : 2x
+    let slowDownModifier = (sizeDiff / 100) - .5 > 1 ? (sizeDiff / 100) - .5 : 1
     
     img.style.top = `${topOffset / slowDownModifier}px`
 }
