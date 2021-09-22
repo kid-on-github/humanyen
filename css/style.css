@@ -428,4 +428,12 @@ button:hover{
     header > div{
         display: none;
     }
+
+    #contact{
+        flex-flow: column nowrap;
+    }
+
+    #contact > div{
+        width: 100%;
+    }
 }
