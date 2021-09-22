@@ -386,3 +386,32 @@ button:hover{
     left:20px;
     transform: rotate(180deg);
 }
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .serviceWrapper{
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .serviceWrapper > div{
+        max-width: 350px;
+    }
+
+
+    #about > div {
+        max-width: 100%;
+    }
+    #about > img{
+        display: none;
+    }
+  }
