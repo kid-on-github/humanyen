@@ -350,6 +350,27 @@ footer{
 }
 
 
+#carouselDots{
+    position: relative;
+    top: -50px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#carouselDots > span{
+    width:15px;
+    height: 15px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#carouselDots > .selected{
+    background: white;
+}
+
 
 #carouselWrapper > button{
     opacity: 0;

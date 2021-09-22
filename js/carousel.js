@@ -1,14 +1,15 @@
 
-const screens = document.getElementById('screens')
+// const screens = document.getElementById('screens')
 
 const delay = 5000
 
 
 let currentScreen = 0
+const screens = document.querySelectorAll('.screen > span')
+const screenCount = screens.length
+
 
 function changeScreen(){
-    const screens = document.querySelectorAll('.screen > span')
-    const screenCount = screens.length
 
     screens.forEach(e=>e.style.opacity = 0)
     document.querySelector(`.screen:nth-of-type(${currentScreen+1}) > span`).style.opacity=1
@@ -27,6 +28,10 @@ function changeScreen(){
     document.querySelector(`.screen:nth-of-type(${nextScreen + 1})`).style.left = '100%'
     document.querySelector(`.screen:nth-of-type(${currentScreen + 1})`).style.left = '0%'
     document.querySelector(`.screen:nth-of-type(${prevScreen + 1})`).style.left = '-100%'
+
+    document.querySelector(`#carouselDots > span:nth-of-type(${prevScreen + 1})`).className = ''
+    document.querySelector(`#carouselDots > span:nth-of-type(${currentScreen + 1})`).className = 'selected'
+
     
     
 }
@@ -53,7 +58,13 @@ function handleClick(mod){
     loop = setInterval(updateCurrentScreen, delay)
 }
 
-// handleClick()
 
-document.getElementById('next').onclick = () => handleClick(1)
-document.getElementById('back').onclick = () => handleClick(-1)
+
+
+// 3 dots
+for (let i=0; i<screenCount; i++){
+    const el = document.getElementById("carouselDots").appendChild( document.createElement('span') )
+    if (i === currentScreen){
+        el.className = 'selected'
+    }
+}
