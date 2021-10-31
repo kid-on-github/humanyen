@@ -51,7 +51,8 @@ function updateCurrentScreen(mod = 1){
 }
 
 
-let loop = setInterval(updateCurrentScreen, delay)
+// let loop = setInterval(updateCurrentScreen, delay)
+
 function handleClick(mod){
     updateCurrentScreen(mod)
     clearInterval(loop)
