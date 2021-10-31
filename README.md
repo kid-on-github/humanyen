@@ -5,6 +5,4 @@ Goals:
 2. Make the site mobile friendly
 
 
-
-enable smooth scrolling on Chrome:
-chrome://flags/#smooth-scrolling
+View the site [here](https://kid-on-github.github.io/humanyen/).
