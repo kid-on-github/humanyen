@@ -332,12 +332,6 @@ footer{
 }
 
 
-/* .parallaxWrapper{
-    background-image: url('../images/meetingroom.jpg');
-} */
-
-
-
 
 
 
@@ -348,8 +342,12 @@ footer{
 
 
 #carouselWrapper{
-    height: 600px;
+    height: auto;
     position: relative;
+}
+
+#carouselWrapper img{
+    width: 100%;
 }
 
 #screens{
